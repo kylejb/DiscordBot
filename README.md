@@ -1,2 +1,4 @@
-# misc-project-repo
-Centralized Repository for my Python Project(s) that I'm tackling while I work on completing py4e on Coursera
+# Discord Bot 
+
+Description to follow. First Python project from start to finish. Designed to help automatically authenticate new users to discord server from reddit.com/r/lsat
+
