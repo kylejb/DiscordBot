@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+.python-version
+__pycache__
+praw.ini
+hidden.py
