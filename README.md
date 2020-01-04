@@ -1,4 +1,3 @@
-# Discord Bot 
+# My First Project | Discord Bot: Server Management
 
-Description to follow. First Python project from start to finish. Designed to help automatically authenticate new users to discord server from reddit.com/r/lsat
-
+This bot helps automatically authenticate Reddit users to a Reddit affilated server.
