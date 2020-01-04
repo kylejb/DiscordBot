@@ -1,0 +1,20 @@
+[discord-bot] # <--used to call contents in this file when initializing 'instance of Reddit' (i.e., connecting to Reddit)
+client_id=Bot/Script-clientID-for-Reddit-API-Authentication
+client_secret=Bot/Script-Secret-for-Reddit-API-Authentication
+user_agent='string goes here'
+username=RedditUsername
+password=RedditPassword
+
+ 
+
+
+
+
+
+"""
+FYI:
+    (1) "praw.ini" passes sensitive information into code for authentication purposes with Reddit's API.
+    (2) You may combine contents from praw.ini with hidden.py; I decided to keep them seperate because praw is natively designed to handle authentication credentials by accessing "praw.ini".
+    (3) Keep this secure and do not publish.
+    (4) PRAW/Reddit Documentation: https://praw.readthedocs.io/en/latest/getting_started/configuration/prawini.html
+"""

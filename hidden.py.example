@@ -1,0 +1,20 @@
+## Discord Bot Credentials
+token="value-goes-here"
+client_id="value-goes-here"
+
+## Discord Server Information
+veri_id=value-goes-here-without-quotes   # discord role id value
+unveri_id=value-goes-here-without-quotes # discord role id value
+
+
+
+
+
+
+
+"""
+FYI:
+    (1) "hidden.py" passes sensitive information into code for authentication purposes.
+    (2) Keep this secure and do not publish.
+    (3) You may combine contents from praw.ini with hidden.py; I decided to keep them seperate because praw is natively designed to handle authentication credentials by accessing "praw.ini".
+"""
