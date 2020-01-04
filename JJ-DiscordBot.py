@@ -27,7 +27,7 @@ bot.remove_command("help")
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="!verify"))
     print("Bot Online!")
-    print("Judgy Judge v0.1")
+    print("Judgy Judge v 0.1.0")
     print(f"Logged in as {bot.user.name}")
     print("==========")
 
