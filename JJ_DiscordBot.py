@@ -8,7 +8,7 @@ from discord.ext.commands import Bot
 
 import hidden
 
-# Logging: observe the HTTP requests that PRAW is issuing
+# Logging: observe the HTTP requests
 logging.basicConfig(level=logging.INFO)
 handler = logging.StreamHandler()
 handler.setLevel(logging.DEBUG)
@@ -87,9 +87,7 @@ async def verify(ctx, *arg):
                 await addrole(author, v_role)
                 await remrole(author, uv_role)
                 await channel.send("Success: You are now a verified member of /r/LSAT!")
-                print("Adding verified role...")
-                print("Removing unverified role from discord user...")
-                print("Done.")
+                # message author for confirmation and info
             except:
                 # Terminal Output for debugging
                 print(f"{username} not found; Response: 404")
@@ -103,20 +101,28 @@ async def verify(ctx, *arg):
             )
 
 
+"""
+@bot.command(pass_context=True)
+# Kick members from server if they have not attempted to change role from unverified to verified
+async def cleanIdle(ctx, *arg):
+    # for Bot communication
+    message = ctx.message
+    channel = message.channel
+    # create class object for Member to get joined_at for date and top_role for highest role
+    member = discord.Member
+    m_toprole = member.top_role
+    # needs to be tested
+    joindate = member.joined_at
+    # create class object for Guild to get member top_role
+    guild = discord.Guild
+    kick_idle = guild.kick
+    idle_role = discord.Object(id=hidden.unveri_id)
+    kick_reason = "Inactivity: You have been automatically removed from server because you have not attempted to verified your account. You are more than welcome to rejoin when ready to verify."
+
+    # more local variables for conditional manipulation
+    # idle_time = joindate compared to present date
+    # kick_this_user = all members if top role is idle_role and idle_time > 2weeks
+    # await kick... if above true
+"""
+
 bot.run(hidden.token)
-
-
-## Questions/Future Plans
-# Need to add role, remove role... maybe auto add role for new members?
-
-# Event loop stopped before future completed ??
-# b/c i hit control+c too many times before allowing bot to clean up??
-# why delay in bot logging off server?
-
-"""
-HOW DO I USE THIS... is this better for debugging?
-try:
-    pass
-except expression as identifier:
-    pass
-"""

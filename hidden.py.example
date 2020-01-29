@@ -1,11 +1,6 @@
 ## Discord Bot Credentials
-token="value-goes-here"
-client_id="value-goes-here"
-
-## Discord Server Information
-veri_id=value-goes-here-without-quotes   # discord role id value
-unveri_id=value-goes-here-without-quotes # discord role id value
-
+token="token-in-quotes"
+client_id="id-in-quotes"
 
 
 

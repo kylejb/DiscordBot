@@ -1,15 +1,11 @@
-[discord-bot] # <--used to call contents in this file when initializing 'instance of Reddit' (i.e., connecting to Reddit)
-client_id=Bot/Script-clientID-for-Reddit-API-Authentication
-client_secret=Bot/Script-Secret-for-Reddit-API-Authentication
-user_agent='string goes here'
-username=RedditUsername
-password=RedditPassword
+[discord-bot]
+client_id=id-without-quotes
+client_secret=secret-without-quotes
+user_agent='string goes here in quotes'
+username=RedditUsername-without-quotes
+password=RedditPassword-without-quotes
 
  
-
-
-
-
 
 """
 FYI:

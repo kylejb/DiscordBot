@@ -2,5 +2,5 @@
 .vscode
 .python-version
 __pycache__
-praw.ini
 hidden.py
+praw.ini
