@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "discordmanager"
+version = "0.1.0"
+description = "Authenticate Discord members by verifying their Reddit username using PRAW.py"
+authors = ["Kyle Burda"]
+license = "MIT"
+readme = "README.md"
+keywords = [
+    "Bot",
+    "Community Management",
+    "Discord",
+    "Reddit",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+"discord.py" = "^1.5.1"
+praw = "^7.1.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
