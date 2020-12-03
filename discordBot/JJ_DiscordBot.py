@@ -1,12 +1,9 @@
-import asyncio
 import datetime
 import logging
-import praw
 import discord
-from discord.ext import commands
-from discord.ext.commands import Bot
-
 import hidden
+import praw
+from discord.ext import commands
 
 # Logging: observe the HTTP requests
 logging.basicConfig(level=logging.INFO)
@@ -37,7 +34,7 @@ async def test(ctx, *arg):
     message = ctx.message
     channel = message.channel
     author = message.author
-    # This is currently printing the else statement regardless of whether i have unveri_id in my role; bot responds though
+    '''This is currently printing the else statement even with unveri_id in role.'''
     if hidden.unveri_id in [x.id for x in author.roles]:
         await channel.send("You need to verify.")
     else:
