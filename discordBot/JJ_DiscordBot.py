@@ -34,7 +34,7 @@ async def test(ctx, *arg):
     message = ctx.message
     channel = message.channel
     author = message.author
-    '''This is currently printing the else statement even with unveri_id in role.'''
+    """This is currently printing the else statement even with unveri_id in role."""
     if hidden.unveri_id in (x.id for x in author.roles):
         await channel.send("You need to verify.")
     else:
@@ -59,11 +59,11 @@ async def verify(ctx, *arg):
         try:
 
             if arg[0].startswith("/u/"):
-                username = arg[0][3 : len(arg[0])]
+                username = arg[0][3:len(arg[0])]
                 print("elif-try-cleaned from '/u/'", username)
 
             elif arg[0].startswith("u/"):
-                username = arg[0][2 : len(arg[0])]
+                username = arg[0][2:len(arg[0])]
                 print("elif-try-cleaned from 'u/'", username)
 
             else:
@@ -73,7 +73,6 @@ async def verify(ctx, *arg):
             account = reddit.redditor(f"{username}")
 
             # Grab the user account
-            # if false account will produce 404 http response, so adding try/except around that parameter
             try:
                 cakeday = datetime.datetime.fromtimestamp(
                     int(account.created)
@@ -85,14 +84,16 @@ async def verify(ctx, *arg):
                 await remrole(author, uv_role)
                 await channel.send("Success: You are now a verified member of /r/LSAT!")
                 # message author for confirmation and info
-            except:
+            except Exception:
                 # Terminal Output for debugging
                 print(f"{username} not found; Response: 404")
                 # Discord Bot response to user issuing command / Feedback
                 await channel.send(
-                    "I was not able to find a reddit account with that username. Please double check your spelling and/or formatting before trying again. If you continue to receive this error message, contact `@Staff` for assistance."
+                    """I was not able to find a reddit account with that username. Please check your spelling.
+                    If you continue to receive this error message, contact `@Staff` for assistance.
+                    """
                 )
-        except:
+        except Exception:
             await channel.send(
                 "Syntax Error: Please follow the form of ``!verify /u/username`` and try again."
             )
@@ -114,7 +115,9 @@ async def cleanIdle(ctx, *arg):
     guild = discord.Guild
     kick_idle = guild.kick
     idle_role = discord.Object(id=hidden.unveri_id)
-    kick_reason = "Inactivity: You have been automatically removed from server because you have not attempted to verified your account. You are more than welcome to rejoin when ready to verify."
+    kick_reason = "Inactivity: You have been automatically removed from server
+    because you have not attempted to verified your account. You are more than
+    welcome to rejoin when ready to verify."
 
     # more local variables for conditional manipulation
     # idle_time = joindate compared to present date
