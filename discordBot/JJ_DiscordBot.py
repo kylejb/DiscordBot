@@ -35,7 +35,7 @@ async def test(ctx, *arg):
     channel = message.channel
     author = message.author
     '''This is currently printing the else statement even with unveri_id in role.'''
-    if hidden.unveri_id in [x.id for x in author.roles]:
+    if hidden.unveri_id in (x.id for x in author.roles):
         await channel.send("You need to verify.")
     else:
         await channel.send("You are a verified member. Thanks! :)")
@@ -52,10 +52,10 @@ async def verify(ctx, *arg):
     addrole = member.add_roles
     remrole = member.remove_roles
 
-    if hidden.veri_id in [x.id for x in author.roles]:
+    if hidden.veri_id in (x.id for x in author.roles):
         await channel.send("You are already a verified member.")
 
-    elif hidden.unveri_id in [x.id for x in author.roles]:
+    elif hidden.unveri_id in (x.id for x in author.roles):
         try:
 
             if arg[0].startswith("/u/"):
