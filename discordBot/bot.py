@@ -24,7 +24,7 @@ bot.remove_command("help")
 async def on_ready():
     await bot.change_presence(activity=discord.Game(name="!verify"))
     print("Bot Online!")
-    print("Judgy Judge v 0.1.0")
+    print("Discord Manager v0.1.0")
     print(f"Logged in as {bot.user.name}")
     print("==========")
 
@@ -82,7 +82,7 @@ async def verify(ctx, *arg):
                 # Discord bot process
                 await addrole(author, v_role)
                 await remrole(author, uv_role)
-                await channel.send("Success: You are now a verified member of /r/LSAT!")
+                await channel.send("Success: You are now a verified member!")
                 # message author for confirmation and info
             except Exception:
                 # Terminal Output for debugging
