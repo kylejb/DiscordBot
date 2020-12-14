@@ -1,14 +1,14 @@
-# Discord Verification Bot (version 0.1.0) 
+<h2 align="center">Another Discord Bot</h2>
 
-Authenticates Discord members by verifying existence of valid Reddit username using PRAW.py ("Python Reddit's API Wrapper").
+<div align="center">
 
+  [![Status](https://img.shields.io/badge/status-inactive-inactive.svg)]()
+  [![License](https://img.shields.io/github/license/kylejb/DiscordManager)](/LICENSE)
 
-# Future Releases will include:
+</div>
 
-- Authentication Upgrade: DM verification code to user's reddit account.
+---
 
-- Advanced Pruning: Bulk remove "unverified" members after a period of time (this will be either triggered Admin issuing command or asyncio).
+### About <a name="about"></a>
 
-- Role Manager: Give users the choice to add and/or remove roles from a fixed list to toggle access to desired content.
-
-- Server Manager: Enable basic logging to support server admins
+My first project. Authenticates Discord members by verifying existence of valid Reddit username.
