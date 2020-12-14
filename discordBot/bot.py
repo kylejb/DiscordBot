@@ -99,30 +99,4 @@ async def verify(ctx, *arg):
             )
 
 
-"""
-@bot.command(pass_context=True)
-# Kick members from server if they have not attempted to change role from unverified to verified
-async def cleanIdle(ctx, *arg):
-    # for Bot communication
-    message = ctx.message
-    channel = message.channel
-    # create class object for Member to get joined_at for date and top_role for highest role
-    member = discord.Member
-    m_toprole = member.top_role
-    # needs to be tested
-    joindate = member.joined_at
-    # create class object for Guild to get member top_role
-    guild = discord.Guild
-    kick_idle = guild.kick
-    idle_role = discord.Object(id=hidden.unveri_id)
-    kick_reason = "Inactivity: You have been automatically removed from server
-    because you have not attempted to verified your account. You are more than
-    welcome to rejoin when ready to verify."
-
-    # more local variables for conditional manipulation
-    # idle_time = joindate compared to present date
-    # kick_this_user = all members if top role is idle_role and idle_time > 2weeks
-    # await kick... if above true
-"""
-
 bot.run(hidden.token)
